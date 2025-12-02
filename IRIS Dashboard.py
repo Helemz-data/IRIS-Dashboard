@@ -8,6 +8,7 @@ df = pd.read_csv("IRIS.csv")
 print(df.head())
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
+server = app.server
 
 app.layout = html.Div([
     html.H1("🌸 Iris Dataset Dashboard", style={'textAlign': 'center'}),
@@ -56,3 +57,4 @@ def update_hist(feature):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
